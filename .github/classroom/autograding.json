@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Testing Pylint and Task 1 tests &#45;  The whole app must pass",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest --pylint",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 100
+    }
+  ]
+}
