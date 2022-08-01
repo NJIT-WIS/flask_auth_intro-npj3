@@ -1,6 +1,6 @@
 """This makes the test configuration setup"""
 # pylint: disable=redefined-outer-name, line-too-long
-import logging
+#import logging
 import os
 
 import pytest
@@ -31,6 +31,7 @@ def application():
 
 @pytest.fixture()
 def add_user(application):
+    """This makes to add user to the application"""
     with application.app_context():
         # new record
         user = User('test@test.com', 'testtest')

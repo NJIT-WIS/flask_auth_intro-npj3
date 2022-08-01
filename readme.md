@@ -1,7 +1,7 @@
 # Project Status
 
-Name:
-UCID:
+Name: Nava Praharsha
+UCID: npj3@njit.edu
 
 [![Production Workflow]() <-Put your own badge code here.
 

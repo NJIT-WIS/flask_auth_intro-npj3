@@ -1,11 +1,13 @@
+"""This makes the test user setup"""
+# pylint: disable=redefined-outer-name, line-too-long
 import logging
-
+#from faker import Faker
 from app import db
 from app.db.models import User
-from faker import Faker
 
 
 def test_adding_user(application):
+    """This makes adding user to the application"""
     log = logging.getLogger("myApp")
     with application.app_context():
         db.drop_all()

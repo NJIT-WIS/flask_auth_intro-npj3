@@ -44,6 +44,7 @@ def test_registration(client):
 
 
 def test_login(client, application, add_user):
+    """This makes login page"""
     response = client.post('/login', data={
         'email': 'test@test.com',
         'password': 'testtest',
@@ -54,6 +55,7 @@ def test_login(client, application, add_user):
 
 
 def test_registeristration_password_not_satisfied(client):
+    """This makes register page"""
     # Testing registering with password not meeting requirements (min 6 characters)
     response = client.post("/register", data={"email": "steve@test.com", "password": "aaa", "confirm": "aaa"})
     # there should be no redirection
@@ -61,6 +63,7 @@ def test_registeristration_password_not_satisfied(client):
 
 
 def test_registeristration_email_wrong_format(client):
+    """This makes register page"""
     # Testing registering with wrong email format
     response = client.post("/register", data={"email": "steve", "password": "aaaaa", "confirm": "aaaaa"})
     # there should be no redirection
@@ -68,6 +71,7 @@ def test_registeristration_email_wrong_format(client):
 
 
 def test_register_with_mismatched_passwords(client):
+    """This makes register page"""
     # Testing registration fail when passwords dont match
     response = client.post("/register", data={"email": "steve@joe.com", "password": "aaaaaa", "confirm": "bbbbbb"},
                            follow_redirects=True)
